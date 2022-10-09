@@ -16,6 +16,8 @@ public class miniProject {
     }
 
     static void checkAnswer(int guess, int answer) {
+        
+        int attempt = 1;
 
         while (guess != answer) {
 
@@ -23,10 +25,12 @@ public class miniProject {
             guess = scanner.nextInt();
             if (guess > answer) {
                 System.out.println("Your guess is too high!");
+                attempt++;
             } else if (guess < answer) {
                 System.out.println("Your guess is too low!");
+                attempt++;
             } else {
-                System.out.println("Congratulations, you've won the game, the answer is: " + answer);
+                System.out.println("Congratulations, you've won the game, the answer is: " + answer + ". You got it right after " + attempt + " guesses.");
             }
 
         }
