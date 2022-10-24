@@ -5,18 +5,22 @@ public class miniProject {
 
     public static void main(String[] args) {
 
+        boolean playing = true;
+        while (playing) {
+            
         Random randNum = new Random();
         int answer = randNum.nextInt(100);
         System.out.println("Welcome to the Guessing game!");
         System.out.println("The goal of this game is to guess on an number of 0-100.");
         System.out.println("If you get it right, the program will congratulate you and write out how many tries it took you.");
         System.out.println("With that being said, what's your first guess?");
-        int guess = 0;
-        checkAnswer(guess, answer);
+        System.out.println(checkAnswer(answer));
+            System.out.println("Thanks for playing, guess on a number again!");
+        }
     }
 
-    static void checkAnswer(int guess, int answer) {
-        
+    static int checkAnswer(int answer) {
+        int guess = 0;
         int attempt = 1;
 
         while (guess != answer) {
@@ -34,5 +38,6 @@ public class miniProject {
             }
 
         }
+        return answer;
     }
 }
