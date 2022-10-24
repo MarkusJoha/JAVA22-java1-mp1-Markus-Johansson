@@ -9,7 +9,7 @@ public class miniProject {
         while (playing) {
             
         Random randNum = new Random();
-        int answer = randNum.nextInt(100);
+        int answer = randNum.nextInt(100) + 1;
         System.out.println("Welcome to the Guessing game!");
         System.out.println("The goal of this game is to guess on an number of 0-100.");
         System.out.println("If you get it right, the program will congratulate you and write out how many tries it took you.");
